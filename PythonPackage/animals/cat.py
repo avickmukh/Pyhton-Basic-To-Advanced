@@ -1,4 +1,4 @@
-from animals.animal import Animal
+from .animal import Animal
 
 class Cat(Animal):
     
@@ -10,4 +10,5 @@ class Cat(Animal):
         self.color = kwargs.get('color')
 
     def __str__(self):
-        return self.color
+        return 'This cat is {} vegetarian, it is having {} legs, it used to eat {}, its color is {}'.format(
+            self.vegetarian, self.noOfLegs, self.eats, self.color)
