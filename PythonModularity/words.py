@@ -1,46 +1,40 @@
-"""Retrive and Print words from a URL
+"""Get count of word in a sentence and Print word each per line in a sentence
 
 usage: 
-    Python words.py <URL>
+    Python words.py <myString>
 """
 import sys
-from urllib.request import urlopen
 
-def fetch_words(url):
-    """Fetch a list of words from a URL.
-    Args:
-        url: The URL of a UTF-8 text document.
-
-    Returns:
-        A list of stringd contanining the words from the document.
-    """
-    story_words = []
-    #'http://sixty-north.com/c/t.txt'
-    with urlopen(url) as story:
-        
-        for line in story:
-            line_words = line.decode('utf-8').split()
-            for word in line_words:
-                story_words.append(word)
-    return story_words
-
-def print_words(items):
-    """Print items one per line
+def word_count(myString):
+    """It will count Number of words in a string
 
     Args:
-        items : An iterable series of items
+        myString : user given string
     """
-    for item in items:
-        print(item)
+    words = myString.split()
 
-def main(url):
-    """Print each word from a text document from a URL
+    return len(words)
+
+
+def print_words(myString):
+    """Print words one per line
+
+    Args:
+        myString : User given sentence
+    """
+    for word in myString.split():
+        print(word)
+
+def main(myString):
+    """Get count of words and print different words in separate line
     
     Args:
-        url : The URL of a UTF-8 text document
+        myString : User given string
     """
-    words = fetch_words(url)
-    print_words(words)
+    wordCount = word_count(myString)
+    print('In this sentence total word count: {}'.format(wordCount))
+    print_words(myString)
 
 #python words.py 
 if __name__ == '__main__' : main(sys.argv[1])
+#if __name__ == '__main__' : main('my name is avick')
