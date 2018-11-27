@@ -4,7 +4,7 @@
    
 class Person(object):
     __aadharCardNo = None
-    def __init(self, **kwargs):
+    def __init__(self, **kwargs):
         self.__firstName = kwargs.get('firstName')
         self.__lastName = kwargs.get('lastName')
         self.__age = kwargs.get('age')
