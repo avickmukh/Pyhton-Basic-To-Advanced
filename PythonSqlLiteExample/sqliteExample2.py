@@ -29,9 +29,9 @@ def main():
     cur = conn.cursor()
 
     try:
-        #cur.execute(cmd)
-        #cur.execute(cmd, (firstName, lastName, city, phone, email, picture, salary))
-        cur.execute(cmd2, { 'firstName': firstName, 'lastName': lastName, 'city': city, 'phone': phone, 'email': email, 'picture': picture, 'salary': salary})
+        cur.execute(cmd)
+        #cur.execute(cmd1, (firstName, lastName, city, phone, email, picture, salary))
+        #cur.execute(cmd2, { 'firstName': firstName, 'lastName': lastName, 'city': city, 'phone': phone, 'email': email, 'picture': picture, 'salary': salary})
         conn.commit()
         print('Employee data created')
     except Exception as e:
