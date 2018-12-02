@@ -5,14 +5,15 @@
 class Person(object):
     __aadharCardNo = None
     def __init__(self, **kwargs):
+        '''This method is similar like constructor'''
         self.__firstName = kwargs.get('firstName')
         self.__lastName = kwargs.get('lastName')
         self.__age = kwargs.get('age')
         if kwargs.get('aadharCardNo') != None :
             self.__aadharCardNo = kwargs.get('aadharCardNo')
 
-
     def print_info(self):
+        '''This method will print information of person, it is a custom method'''
         print('information about the person')
         print('First Name = ', self.__firstName)
         print('last Name = ', self.__lastName)
@@ -21,6 +22,7 @@ class Person(object):
         print()
 
     def __str__(self):
+        '''This method will invoke when we will print this class object'''
         return ' Person [FirstName = {}, LastName = {}, Age = {}, AadharCardNo = {}]'.format(
             self.__firstName,
             self.__lastName,
@@ -28,9 +30,9 @@ class Person(object):
             self.__aadharCardNo)
 
 def person_test():
-    p1 = Person(firstName = 'Avick', lastName = 'Mukherjee', age = '30', aadharCardNo = 'ihiqhiqhh')
+    p1 = Person(firstName = 'John', lastName = 'Doe', age = '30', aadharCardNo = 'dhaidhia')
     p1.print_info()
-    p2 = Person(firstName = 'Arnab', lastName = 'Mukherjee', age = '26', aadharCardNo = 'uuajajja')
+    p2 = Person(firstName = 'James', lastName = 'Bond', age = '26', aadharCardNo = 'uuajajja')
     print(p2)
 
 if __name__ == '__main__' :
