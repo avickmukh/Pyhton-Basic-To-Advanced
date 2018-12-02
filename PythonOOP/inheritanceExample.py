@@ -1,5 +1,5 @@
 '''
-   working with inheritance in python
+   This example we will see inheritance in python
 '''
    
 class Person(object):
@@ -46,7 +46,7 @@ class Employee(Person, Resource):
 
 
 def main():
-    employee1 = Employee(name = 'Avick Mukherjee', email = 'avickmukh@gmail.com', phone = '998899887', location='Bangalore', resourceId='1')
+    employee1 = Employee(name = 'John Doe', email = 'johnDoe@gmail.com', phone = '998899887', location='Kolkata', resourceId='1')
     #print(dir(employee1))
     print(employee1)
 

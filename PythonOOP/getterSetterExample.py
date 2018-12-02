@@ -1,5 +1,7 @@
 '''
    working with properties in class
+
+   This Example will show getter setter for a class
 '''
    
 class Person(object):
@@ -51,6 +53,9 @@ class Person(object):
         self.__aadharCardNo = value
 
     def __iadd__(self, value):
+        ''' Here we will overriding __iadd__ method of Object
+            In this method only you will find operator overloading
+        '''
         if type(value) in (int, float):
             self.age += value
         elif type(value) == str:
@@ -58,20 +63,20 @@ class Person(object):
         return self
 
 def main():
-    p1 = Person(firstName = 'Avick', lastName = 'Mukherjee', age = 30, aadharCardNo = 'ihiqhiqhh')
+    p1 = Person(firstName = 'John', lastName = 'Doe', age = 30, aadharCardNo = 'ihiqhiqhh')
     print(p1)
     print(p1.firstName)
     print(p1.lastName)
     print(p1.age)
     print(p1.aadharCardNo)
 
-    p1.firstName = 'Anup'
+    p1.firstName = 'James'
     p1.age = 60
     p1.aadharCardNo = 'rqrqcafaf'
 
     print(p1)
 
-    p1 += ' Kumar'
+    p1 += ' Bond'
     p1 += 1
 
     print(p1)
